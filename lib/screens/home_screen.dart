@@ -12,7 +12,11 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.menu, color: Colors.black87),
+          icon: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: const Icon(Icons.menu, color: Colors.black87),
+          ),
+          iconSize: 28,
           onPressed: () {},
         ),
         title: Column(
@@ -20,14 +24,14 @@ class HomeScreen extends StatelessWidget {
           children: [
             Text(
               'Your Location',
-              style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+              style: TextStyle(fontSize: 12, color: Colors.grey[800]),
             ),
             Row(
               children: [
                 const Text(
                   'New York, NY',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                   ),
@@ -46,8 +50,17 @@ class HomeScreen extends StatelessWidget {
             icon: const Icon(
               Icons.notifications_outlined,
               color: Colors.black87,
+              size: 28,
             ),
             onPressed: () {},
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8, right: 8),
+            child: CircleAvatar(
+              radius: 20,
+              backgroundColor: Colors.grey[200],
+              child: const Icon(Icons.person, size: 24, color: Colors.black87),
+            ),
           ),
         ],
       ),
@@ -205,7 +218,9 @@ class HomeScreen extends StatelessWidget {
                       height: 140,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.white.withValues(alpha: 0.08), // much lighter
+                        color: Colors.white.withValues(
+                          alpha: 0.08,
+                        ), // much lighter
                         boxShadow: [
                           BoxShadow(
                             color: Colors.white.withValues(alpha: 0.1),
