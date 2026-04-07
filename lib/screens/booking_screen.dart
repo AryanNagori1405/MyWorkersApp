@@ -781,7 +781,7 @@ class _BookingScreenState extends State<BookingScreen> {
                     ? Icons.business_outlined
                     : Icons.home_outlined,
                 color: selected ? const Color(0xFF4361EE) : Colors.grey[600],
-                size: 20,
+                size: 18,
               ),
             ),
             const SizedBox(width: 12),
